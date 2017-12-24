@@ -116,6 +116,16 @@ int main(int argc, char *argv[])
     //The following output pretty much follows the pattern
     //in the rule_defns_benchmark.hpp in the #else part of
     //the #ifdef USE_GRAM_FILE...#endif.
+    //
+    //The indentation probably seems odd; however, the
+    //reason for such indentation is to reflect the indentation
+    //produced on the output file.  It's much easier to debug
+    //this code because after a run, and checking where the output
+    //indentation is wrong, it's easier to see where a change
+    //in this code should be made, because there's a close
+    //correspondence between the indentation in this code
+    //and the indentation in the output produce.
+    //
     gfi()<<"#if RULE2RHS_WHICH != RULE2RHS_GET_RHS_CRTP\n";
     ++gfi;
       rule_decls( gfi, num_rules);
