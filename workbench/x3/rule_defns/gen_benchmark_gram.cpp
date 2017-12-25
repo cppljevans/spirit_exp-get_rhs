@@ -124,7 +124,7 @@ int main(int argc, char *argv[])
     //indentation is wrong, it's easier to see where a change
     //in this code should be made, because there's a close
     //correspondence between the indentation in this code
-    //and the indentation in the output produce.
+    //and the indentation in the output file.
     //
     gfi()<<"#if RULE2RHS_WHICH != RULE2RHS_GET_RHS_CRTP\n";
     ++gfi;

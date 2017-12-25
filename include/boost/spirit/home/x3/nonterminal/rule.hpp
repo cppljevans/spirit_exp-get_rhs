@@ -95,6 +95,7 @@ namespace boost { namespace spirit { namespace x3
           );
         return false;
     }
+  #if BOOST_SPIRIT_X3_EXPERIMENTAL_GET_RHS_CRTP  
     struct rule_undefined
     /**@brief
      *  Tag value indicating a rule has not been defined.
@@ -114,7 +115,7 @@ namespace boost { namespace spirit { namespace x3
             return false;
         }
     };
-    
+  #endif//BOOST_SPIRIT_X3_EXPERIMENTAL_GET_RHS_CRTP  
     template<typename ID>
     struct get_id
     /*! \brief

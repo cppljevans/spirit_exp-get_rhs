@@ -51,7 +51,7 @@ namespace boost { namespace spirit { namespace x3
     parse_rule(
         rule<ID, Attribute> rule_
       , Iterator& first, Iterator const& last
-      , Context const& context, ActualAttribute& attr);    
+      , Context const& context, ActualAttribute& attr);
 }}}
 
 namespace boost { namespace spirit { namespace x3 { namespace detail
