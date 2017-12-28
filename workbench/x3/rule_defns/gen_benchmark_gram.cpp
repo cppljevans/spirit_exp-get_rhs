@@ -181,10 +181,12 @@ int main(int argc, char *argv[])
             { 
               gfi()<<", ";
             }
-            gfi.os()<<"( ";
-            osb gfb(gfi);
-            gfi.os()<<r_lhs<rul>(i_rule)<<"="<<rhs<rul>(i_rule,num_rules)<<"\n";
-            gfi()<<")\n";
+            {
+              osb gfb(gfi);
+              gfi.os()<<"( ";
+              gfi.os()<<r_lhs<rul>(i_rule)<<"="<<rhs<rul>(i_rule,num_rules)<<"\n";
+              gfi()<<")\n";
+            }
           }
         }
         gfi()<<")\n";
