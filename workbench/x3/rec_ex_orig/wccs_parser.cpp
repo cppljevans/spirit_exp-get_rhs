@@ -15,7 +15,8 @@ Message-ID: <a5c089be-f118-3297-147f-588f23818bbb@gmail.com>
 https://sourceforge.net/p/spirit/mailman/message/36091645/
  */
 //=================================    
-#define BOOST_SPIRIT_X3_DEBUG
+#define SHOW_WRONG_SIZE_ATTRIBUTE_ASSERTION_FAILURE
+//#define BOOST_SPIRIT_X3_DEBUG
 #include <boost/config/warning_disable.hpp>
 #include <boost/spirit/home/x3.hpp>
 #include <boost/spirit/home/x3/support/ast/variant.hpp>

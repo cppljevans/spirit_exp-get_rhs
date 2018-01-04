@@ -206,6 +206,10 @@ namespace boost { namespace spirit { namespace x3
          *    https://stackoverflow.com/questions/43791079/x3-linker-error-with-separate-tu
          */
         {
+            #ifdef TRACE_RULE_DEFINITION_PARSE_F
+              trace_scope ts("rule_definition::parse");
+              std::cout<<":rule name="<<name<<"\n";
+            #endif
             auto parser_f=[&]
               ( Iterator& f_first, Iterator const& f_last
               , auto&_attr
@@ -281,11 +285,15 @@ namespace boost { namespace spirit { namespace x3
           , Context const& context, unused_type, ActualAttribute& attr) const
         {
           #if BOOST_SPIRIT_X3_EXPERIMENTAL_ATTR_XFORM_IN_RULE
+            #ifdef TRACE_RULE_PARSE_F
+              trace_scope ts("rule::parse");
+              std::cout<<":rule name="<<name<<"\n";
+            #endif
             auto parser_f=[&]
               ( Iterator& f_first, Iterator const& f_last
               , auto&_attr
               )
-              {  return  parse_rule(*this, f_first, f_last, context, _attr);
+              {  return parse_rule(*this, f_first, f_last, context, _attr);
               };
             bool ok_parse=
               detail::rule_parser<Attribute,ID>::rule_attr_transform_f
@@ -385,11 +393,11 @@ namespace boost { namespace spirit { namespace x3
     Using this obviates the need for calling the combination of
     BOOST_SPIRIT_DECLARE_ and BOOST_SPIRIT_INSTANTIATE.
 */
-#if BOOST_SPIRIT_X3_EXPERIMENTAL_ATTR_XFORM_IN_RULE
+#if BOOST_SPIRIT_X3_EXPERIMENTAL_ATTR_XFORM_IN_RULE && !defined(SHOW_PARSE_NO_XFORM_NEED)
   #define BOOST_SPIRIT_X3_EXPERIMENTAL_RDEF_PARSE parse_no_xform
 #else
   #define BOOST_SPIRIT_X3_EXPERIMENTAL_RDEF_PARSE parse
-#endif//BOOST_SPIRIT_X3_EXPERIMENTAL_ATTR_XFORM_IN_RULE  
+#endif//BOOST_SPIRIT_X3_EXPERIMENTAL_ATTR_XFORM_IN_RULE
 #if BOOST_WORKAROUND(BOOST_MSVC, < 1910)
 #define BOOST_SPIRIT_DEFINE_(r, data, rule_name)                                \
     using BOOST_PP_CAT(rule_name, _synonym) = decltype(rule_name);              \

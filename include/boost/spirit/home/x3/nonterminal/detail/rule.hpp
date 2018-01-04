@@ -322,6 +322,10 @@ namespace boost { namespace spirit { namespace x3 { namespace detail
           , Parser parser
           )
         { 
+        #ifdef TRACE_RULE_ATTRIBUTE_TRANSFORM
+          trace_scope ts("rule_attr_transform_f");
+          std::cout<<":rule_name="<<rule_name<<"\n";
+        #endif//TRACE_RULE_ATTRIBUTE_TRANSFORM
           using make_attribute=traits::make_attribute<Attribute, ActualAttribute>;
         
           // do down-stream transformation, provides attribute for
