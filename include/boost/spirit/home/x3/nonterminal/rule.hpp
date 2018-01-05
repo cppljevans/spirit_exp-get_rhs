@@ -393,7 +393,7 @@ namespace boost { namespace spirit { namespace x3
     Using this obviates the need for calling the combination of
     BOOST_SPIRIT_DECLARE_ and BOOST_SPIRIT_INSTANTIATE.
 */
-#if BOOST_SPIRIT_X3_EXPERIMENTAL_ATTR_XFORM_IN_RULE && !defined(SHOW_PARSE_NO_XFORM_NEED)
+#if BOOST_SPIRIT_X3_EXPERIMENTAL_ATTR_XFORM_IN_RULE && (SHOW_PARSE_NO_XFORM_NEEDED==0)
   #define BOOST_SPIRIT_X3_EXPERIMENTAL_RDEF_PARSE parse_no_xform
 #else
   #define BOOST_SPIRIT_X3_EXPERIMENTAL_RDEF_PARSE parse

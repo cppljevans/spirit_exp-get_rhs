@@ -1,0 +1,19 @@
+#ifndef BOOST_SPIRIT_TEST_X3_BOOST_SPIRIT_INSTANTIATE_LINK_ERROR_TRACE_FLAGS
+#define BOOST_SPIRIT_TEST_X3_BOOST_SPIRIT_INSTANTIATE_LINK_ERROR_TRACE_FLAGS
+#ifndef SHOW_PARSE_NO_XFORM_NEEDED
+  #define SHOW_PARSE_NO_XFORM_NEEDED 1
+#endif  
+#define TRACE_RULE_DEFINITION_PARSE_F
+#define TRACE_RULE_PARSE_F
+#if 1 \
+ || defined(TRACE_RULE_DEFINITION_PARSE_F) \
+ || defined(TRACE_RULE_PARSE_F) \
+ || 0
+ 
+#define USE_TRACE_SCOPE
+#endif 
+#ifdef USE_TRACE_SCOPE
+#include "../type_name.hpp"  
+#include "../trace_scope.hpp"  
+#endif
+#endif
