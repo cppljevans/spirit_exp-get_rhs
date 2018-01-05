@@ -1,0 +1,48 @@
+-*- mode: compilation; default-directory: "~/prog_dev/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/workbench/x3/BOOST_SPIRIT_INSTANTIATE_link_error/" -*-
+Compilation started at Fri Jan  5 11:30:02
+
+make compare
+make VAL_NO_XFORM_NEEDED=0 --always-make run
+make[1]: Entering directory '/home/evansl/prog_dev/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/workbench/x3/BOOST_SPIRIT_INSTANTIATE_link_error'
+/home/evansl/dwnlds/llvm/5.0/prebuilt/clang+llvm-5.0.0-linux-x86_64-ubuntu16.04/bin/clang++ -c -O0 -gdwarf-2 -stdlib=libc++  -std=c++17 -ftemplate-backtrace-limit=0 -fdiagnostics-show-template-tree -fno-elide-type -fmacro-backtrace-limit=0     -I/home/evansl/prog_dev/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/include -I/home/evansl/prog_dev/boost/releases/ro/boost_1_65_1 -I/home/evansl/prog_dev/boost/sandbox/lje/non_variadic_templates -DBOOST_SPIRIT_X3_EXPERIMENTAL_GET_RHS_NS=0 -DBOOST_SPIRIT_X3_EXPERIMENTAL_GET_RHS_CRTP=0 -DBOOST_SPIRIT_X3_EXPERIMENTAL_ATTR_XFORM_IN_RULE=1 -DSHOW_PARSE_NO_XFORM_NEEDED=0     -ftemplate-depth=200  main.cpp -MMD -o /tmp/build/clangxx5_0_pkg/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/workbench/x3/BOOST_SPIRIT_INSTANTIATE_link_error/main.o 
+/home/evansl/dwnlds/llvm/5.0/prebuilt/clang+llvm-5.0.0-linux-x86_64-ubuntu16.04/bin/clang++ -c -O0 -gdwarf-2 -stdlib=libc++  -std=c++17 -ftemplate-backtrace-limit=0 -fdiagnostics-show-template-tree -fno-elide-type -fmacro-backtrace-limit=0     -I/home/evansl/prog_dev/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/include -I/home/evansl/prog_dev/boost/releases/ro/boost_1_65_1 -I/home/evansl/prog_dev/boost/sandbox/lje/non_variadic_templates -DBOOST_SPIRIT_X3_EXPERIMENTAL_GET_RHS_NS=0 -DBOOST_SPIRIT_X3_EXPERIMENTAL_GET_RHS_CRTP=0 -DBOOST_SPIRIT_X3_EXPERIMENTAL_ATTR_XFORM_IN_RULE=1 -DSHOW_PARSE_NO_XFORM_NEEDED=0     -ftemplate-depth=200  start.cpp -MMD -o /tmp/build/clangxx5_0_pkg/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/workbench/x3/BOOST_SPIRIT_INSTANTIATE_link_error/start.o 
+/home/evansl/dwnlds/llvm/5.0/prebuilt/clang+llvm-5.0.0-linux-x86_64-ubuntu16.04/bin/clang++ -stdlib=libc++    /tmp/build/clangxx5_0_pkg/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/workbench/x3/BOOST_SPIRIT_INSTANTIATE_link_error/main.o /tmp/build/clangxx5_0_pkg/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/workbench/x3/BOOST_SPIRIT_INSTANTIATE_link_error/start.o  -o /tmp/build/clangxx5_0_pkg/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/workbench/x3/BOOST_SPIRIT_INSTANTIATE_link_error/main.exe
+/tmp/build/clangxx5_0_pkg/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/workbench/x3/BOOST_SPIRIT_INSTANTIATE_link_error/main.exe 
+===>Enter:{{rule::parse
+  :rule name=N5boost6spirit2x34ruleIN6client8start_idENS_6fusion5dequeIJNSt3__112basic_stringIcNS7_11char_traitsIcEENS7_9allocatorIcEEEEbEEELb0EEE
+  ===>Enter:{{rule_definition::parse
+    :rule name=N5boost6spirit2x34ruleIN6client8start_idENS_6fusion5dequeIJNSt3__112basic_stringIcNS7_11char_traitsIcEENS7_9allocatorIcEEEEbEEELb0EEE
+  ===>Exit_:}}rule_definition::parse
+===>Exit_:}}rule::parse
+label0!
+
+ Parses OK: 
+[[l, a, b, e, l, 0], 1]
+-------------------------
+all_ok=1
+make[1]: Leaving directory '/home/evansl/prog_dev/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/workbench/x3/BOOST_SPIRIT_INSTANTIATE_link_error'
+make VAL_NO_XFORM_NEEDED=1 --always-make run
+make[1]: Entering directory '/home/evansl/prog_dev/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/workbench/x3/BOOST_SPIRIT_INSTANTIATE_link_error'
+/home/evansl/dwnlds/llvm/5.0/prebuilt/clang+llvm-5.0.0-linux-x86_64-ubuntu16.04/bin/clang++ -c -O0 -gdwarf-2 -stdlib=libc++  -std=c++17 -ftemplate-backtrace-limit=0 -fdiagnostics-show-template-tree -fno-elide-type -fmacro-backtrace-limit=0     -I/home/evansl/prog_dev/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/include -I/home/evansl/prog_dev/boost/releases/ro/boost_1_65_1 -I/home/evansl/prog_dev/boost/sandbox/lje/non_variadic_templates -DBOOST_SPIRIT_X3_EXPERIMENTAL_GET_RHS_NS=0 -DBOOST_SPIRIT_X3_EXPERIMENTAL_GET_RHS_CRTP=0 -DBOOST_SPIRIT_X3_EXPERIMENTAL_ATTR_XFORM_IN_RULE=1 -DSHOW_PARSE_NO_XFORM_NEEDED=1     -ftemplate-depth=200  main.cpp -MMD -o /tmp/build/clangxx5_0_pkg/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/workbench/x3/BOOST_SPIRIT_INSTANTIATE_link_error/main.o 
+/home/evansl/dwnlds/llvm/5.0/prebuilt/clang+llvm-5.0.0-linux-x86_64-ubuntu16.04/bin/clang++ -c -O0 -gdwarf-2 -stdlib=libc++  -std=c++17 -ftemplate-backtrace-limit=0 -fdiagnostics-show-template-tree -fno-elide-type -fmacro-backtrace-limit=0     -I/home/evansl/prog_dev/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/include -I/home/evansl/prog_dev/boost/releases/ro/boost_1_65_1 -I/home/evansl/prog_dev/boost/sandbox/lje/non_variadic_templates -DBOOST_SPIRIT_X3_EXPERIMENTAL_GET_RHS_NS=0 -DBOOST_SPIRIT_X3_EXPERIMENTAL_GET_RHS_CRTP=0 -DBOOST_SPIRIT_X3_EXPERIMENTAL_ATTR_XFORM_IN_RULE=1 -DSHOW_PARSE_NO_XFORM_NEEDED=1     -ftemplate-depth=200  start.cpp -MMD -o /tmp/build/clangxx5_0_pkg/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/workbench/x3/BOOST_SPIRIT_INSTANTIATE_link_error/start.o 
+/home/evansl/dwnlds/llvm/5.0/prebuilt/clang+llvm-5.0.0-linux-x86_64-ubuntu16.04/bin/clang++ -stdlib=libc++    /tmp/build/clangxx5_0_pkg/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/workbench/x3/BOOST_SPIRIT_INSTANTIATE_link_error/main.o /tmp/build/clangxx5_0_pkg/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/workbench/x3/BOOST_SPIRIT_INSTANTIATE_link_error/start.o  -o /tmp/build/clangxx5_0_pkg/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/workbench/x3/BOOST_SPIRIT_INSTANTIATE_link_error/main.exe
+/tmp/build/clangxx5_0_pkg/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/workbench/x3/BOOST_SPIRIT_INSTANTIATE_link_error/main.exe 
+===>Enter:{{rule::parse
+  :rule name=N5boost6spirit2x34ruleIN6client8start_idENS_6fusion5dequeIJNSt3__112basic_stringIcNS7_11char_traitsIcEENS7_9allocatorIcEEEEbEEELb0EEE
+  ===>Enter:{{rule_definition::parse
+    :rule name=N5boost6spirit2x34ruleIN6client8start_idENS_6fusion5dequeIJNSt3__112basic_stringIcNS7_11char_traitsIcEENS7_9allocatorIcEEEEbEEELb0EEE
+    ===>Enter:{{rule_definition::parse
+      :rule name=N5boost6spirit2x34ruleIN6client8start_idENS_6fusion5dequeIJNSt3__112basic_stringIcNS7_11char_traitsIcEENS7_9allocatorIcEEEEbEEELb0EEE
+    ===>Exit_:}}rule_definition::parse
+  ===>Exit_:}}rule_definition::parse
+===>Exit_:}}rule::parse
+label0!
+
+ Parses OK: 
+[[l, a, b, e, l, 0], 1]
+-------------------------
+all_ok=1
+make[1]: Leaving directory '/home/evansl/prog_dev/boost/releases/ro/boost_1_65_1/sandbox/lje/spirit-experiments/workbench/x3/BOOST_SPIRIT_INSTANTIATE_link_error'
+
+Compilation finished at Fri Jan  5 11:30:10
+
