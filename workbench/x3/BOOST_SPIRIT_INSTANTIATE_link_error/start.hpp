@@ -6,17 +6,26 @@
 ==============================================================================*/
 #ifndef BOOST_SPIRIT_TEST_X3_BOOST_SPIRIT_INSTANTIATE_LINK_ERROR_START
 #define BOOST_SPIRIT_TEST_X3_BOOST_SPIRIT_INSTANTIATE_LINK_ERROR_START
-#include "trace_flags.hpp"
+#include "../trace_flags.hpp"
 #include <boost/spirit/home/x3.hpp>
 #include <boost/spirit/home/x3/support/traits/attribute_of.hpp>
 
 namespace client{
 namespace x3 = boost::spirit::x3;
-namespace ascii = x3::ascii;
+#define LINK_ERROR
+#ifndef LINK_ERROR
+#define START_RHS_V \
+  +x3::alnum
+#else
+//Emulate the a_def grammar expression in
+//../Halvorsen_link_error/field_def.h.
+//The reason Halvorsen_link_error fails to
+//link is because the attribute in field.cpp
+//is wrong.  It should be char instead of unsued_type.
+//
 
-using x3::ulong_;
-using x3::lexeme;
-#define START_RHS_V x3::lexeme[+(ascii::alnum)] >> x3::matches['!']
+#define START_RHS_V x3::char_
+#endif//LINK_ERROR  
 using start_rhs_t = decltype(START_RHS_V);
 using context_t=x3::unused_type;
 using start_attr_t = x3::traits::attribute_of<start_rhs_t, context_t>::type;

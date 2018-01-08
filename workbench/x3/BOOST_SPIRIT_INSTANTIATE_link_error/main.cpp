@@ -2,7 +2,7 @@
 //  Show that the rule_definition::parse_no_xform is needed.
 //=================================  
 //#define BOOST_SPIRIT_X3_DEBUG
-#include "trace_flags.hpp"
+#include "../trace_flags.hpp"
 #include <boost/config/warning_disable.hpp>
 #include <boost/spirit/home/x3.hpp>
 #include <boost/spirit/home/x3/support/traits/attribute_of.hpp>
@@ -24,8 +24,7 @@ int main() {
 #endif
 
      std::string strs[]=
-     { "label0!"
-     //, "label1"
+     { "var x0 : x1;"
      };
      bool all_ok=true;
      for(std::string str : strs)

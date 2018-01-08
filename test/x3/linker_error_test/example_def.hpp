@@ -12,7 +12,7 @@ const var_dec_type& var_dec_rule()
 }
 const auto var_dec=var_dec_rule();
 
-#define EXAMPLE_DEF_LINK_ERR
+//#define EXAMPLE_DEF_LINK_ERR
 #if defined(EXAMPLE_DEF_LINK_ERR)
 #pragma message "yesdef(EXAMPLE_DEF_LINK_ERR)"
 #else
@@ -22,11 +22,11 @@ auto const var_dec_def = x3::lexeme["var "]
                          > +x3::alnum
                          > ":"
                        #ifdef EXAMPLE_DEF_LINK_ERR 
-                         >> type() //<- this gets linker error.
+                         >> type() //<- produces link error.
                        #else
                          > 
                          #ifdef VARIABLE_DEC_OPTIONAL
-                          -type()
+                          -type() //<- produces link error.
                          #else 
                            type() //<- This links.
                          #endif

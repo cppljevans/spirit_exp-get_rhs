@@ -1,7 +1,3 @@
-//
-// Created by lukas on 11.11.16.
-//
-
 #ifndef LINKER_ERROR_EXAMPLE_AST_HPP_HPP
 #define LINKER_ERROR_EXAMPLE_AST_HPP_HPP
 
@@ -20,7 +16,7 @@
 #define VARIABLE_DEC_OPTIONAL
   //The reason for this macro is apparent
   //in example_def.hpp
-//#define PRAGMA_VARIABLE_OPTIONAL
+#define PRAGMA_VARIABLE_OPTIONAL
 #ifdef PRAGMA_VARIABLE_OPTIONAL
 #ifdef VARIABLE_DEC_OPTIONAL
     #pragma message "yesdef(VARIABLE_DEC_OPTIONAL)"

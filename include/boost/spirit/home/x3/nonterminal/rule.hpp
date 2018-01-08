@@ -32,9 +32,9 @@
   #define BOOST_SPIRIT_X3_EXPERIMENTAL_ATTR_XFORM_IN_RULE 1
 #endif  
 #if BOOST_SPIRIT_X3_EXPERIMENTAL_ATTR_XFORM_IN_RULE
-  //#pragma message "ATTR_XFORM_IN_RULE."
+  #pragma message "ATTR_XFORM_IN_RULE."
 #else
-  //#pragma message "deprecated.  May cause link error when using BOOST_SPIRIT_INSTANTIATE."
+  #pragma message "deprecated.  May cause link error when using BOOST_SPIRIT_INSTANTIATE."
 #endif//BOOST_SPIRIT_X3_EXPERIMENTAL_ATTR_XFORM_IN_RULE
 
 #include <boost/spirit/home/x3/nonterminal/detail/rule.hpp>
@@ -284,11 +284,12 @@ namespace boost { namespace spirit { namespace x3
         bool parse(Iterator& first, Iterator const& last
           , Context const& context, unused_type, ActualAttribute& attr) const
         {
+          #ifdef TRACE_RULE_PARSE_F
+            trace_scope ts("rule::parse");
+            std::cout<<":rule name="<<name<<"\n";
+            std::cout<<"type_name<ActualAttribute>="<<type_name<ActualAttribute&>()<<"\n";
+          #endif
           #if BOOST_SPIRIT_X3_EXPERIMENTAL_ATTR_XFORM_IN_RULE
-            #ifdef TRACE_RULE_PARSE_F
-              trace_scope ts("rule::parse");
-              std::cout<<":rule name="<<name<<"\n";
-            #endif
             auto parser_f=[&]
               ( Iterator& f_first, Iterator const& f_last
               , auto&_attr

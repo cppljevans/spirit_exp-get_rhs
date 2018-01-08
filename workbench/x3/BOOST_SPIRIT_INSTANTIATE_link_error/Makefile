@@ -4,17 +4,17 @@ HOW=clangxx5_0_pkg
 #HOW=gcc6_20151018
 MAIN=main
 DIR.root := $(shell dirup_dir_file.pl $(PWD) root.imk)
-include $(DIR.root)/root.imk
-main.exe.deps:=start
-main.exe.deps:=$(main.exe.deps:%=%.o)
-main.exe.deps:=$(main.exe.deps:%=$(BUILD_HOW_WHAT.dir)/%)
+main_exe.deps:=start
+main_exe.deps:=$(main_exe.deps:%=%.o)
+main.exe.deps=$(main_exe.deps:%=$(BUILD_HOW_WHAT.dir)/%)
 $(BUILD_HOW_WHAT.dir)/main.exe : $(main.exe.deps)
+include $(DIR.root)/root.imk
 
 USE_FORK.which?=1
 USE_FORK.0=
 USE_FORK.1=-I$(boost.spirit.fork)
 VAL_XFORM_IN_RULE?=1
-VAL_NO_XFORM_NEEDED?=1
+VAL_NO_XFORM_NEEDED?=0
 INCS= \
   $(USE_FORK.$(USE_FORK.which)) \
   -I$(boost.root) \
@@ -33,6 +33,8 @@ compare:
 
 show:
 	@echo "USE_FORk.which=$(USE_FORK.$(USE_FORK.which))"
+	@echo "main.exe.deps=$($(MAIN).exe.deps)"
+	@echo "SRC.deps=$(SRC.deps)"
 
 
 
