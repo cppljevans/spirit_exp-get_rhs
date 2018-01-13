@@ -10,13 +10,14 @@ main.exe.deps=$(main_exe.deps:%=$(BUILD_HOW_WHAT.dir)/%)
 $(BUILD_HOW_WHAT.dir)/main.exe : $(main.exe.deps)
 include $(DIR.root)/root.imk
 
-USE_FORK.which?=1
-USE_FORK.0=
-USE_FORK.1=-I$(boost.spirit.fork)
+USE_SPIRIT.which?=0
+USE_SPIRIT.0=
+USE_SPIRIT.1=-I$(boost.spirit.devel)
+USE_SPIRIT.2=-I$(boost.spirit.fork)
 VAL_XFORM_IN_RULE?=1
 VAL_NO_XFORM_NEEDED?=0
 INCS= \
-  $(USE_FORK.$(USE_FORK.which)) \
+  $(USE_SPIRIT.$(USE_SPIRIT.which)) \
   -I$(boost.root) \
   -I$(nonvartmpl.root) \
   -DBOOST_SPIRIT_X3_EXPERIMENTAL_GET_RHS_NS=0 \
@@ -32,7 +33,7 @@ compare:
 	make VAL_NO_XFORM_NEEDED=1 --always-make run
 
 show:
-	@echo "USE_FORk.which=$(USE_FORK.$(USE_FORK.which))"
+	@echo "USE_FORk.which=$(USE_SPIRIT.$(USE_SPIRIT.which))"
 	@echo "main.exe.deps=$($(MAIN).exe.deps)"
 	@echo "SRC.deps=$(SRC.deps)"
 
