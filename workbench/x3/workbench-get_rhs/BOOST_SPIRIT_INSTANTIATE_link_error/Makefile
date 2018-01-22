@@ -4,10 +4,7 @@ HOW=clangxx5_0_pkg
 #HOW=gcc6_20151018
 MAIN=main
 DIR.root := $(shell dirup_dir_file.pl $(PWD) root.imk)
-main_exe.deps:=start
-main_exe.deps:=$(main_exe.deps:%=%.o)
-main.exe.deps=$(main_exe.deps:%=$(BUILD_HOW_WHAT.dir)/%)
-$(BUILD_HOW_WHAT.dir)/main.exe : $(main.exe.deps)
+main.exe.deps=start
 include $(DIR.root)/root.imk
 
 USE_SPIRIT.which?=0
